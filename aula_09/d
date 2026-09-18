@@ -1,0 +1,7 @@
+renda = input ("Qual sua faixa salarial?")
+if int(renda) > 10000:
+  print ("alta")
+elif int(renda)>5000:
+  print ("média")
+else:
+  print ("baixa")
