@@ -1,7 +1,9 @@
-renda = input ("Qual sua faixa salarial?")
-if int(renda) > 10000:
-  print ("alta")
-elif int(renda)>5000:
-  print ("média")
-else:
-  print ("baixa")
+renda = int(input ("Qual sua faixa salarial?"))
+def c(renda):
+    if int(renda)>= 10000:
+        return f"alta renda, {8/100*int(renda)}"
+    elif int(renda)>= 5000:
+        return f"media renda, {5/100*int(renda)}"
+    else:
+        return f"baixa renda,{3/100*int(renda)}"
+print (f"classificação da renda e imposto a pagar: {c(renda)}")
