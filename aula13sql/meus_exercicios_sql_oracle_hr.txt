@@ -66,7 +66,9 @@ EXERCÍCIO 07 — Cargo e faixa salarial
 Nível 2: Junções (JOINs) e relacionamentos
 Liste o primeiro nome do funcionário, o título do cargo (JOB_TITLE) e os salários mínimo e máximo permitidos para o cargo.
 
--- Não respondido
+SELECT E.FIRST_NAME, J.JOB_TITLE, J.MIN_SALARY, J.MAX_SALARY 
+FROM HR.EMPLOYEES 
+E INNER JOIN HR. JOBS J ON E.JOB_ID = J.JOB_ID;
 
 ----------------------------------------------------------------
 
