@@ -76,7 +76,10 @@ EXERCÍCIO 08 — Departamento e localização
 Nível 2: Junções (JOINs) e relacionamentos
 Mostre o sobrenome de cada funcionário, o nome do departamento, a cidade (CITY) e o estado (STATE_PROVINCE) onde o departamento está localizado.
 
--- Não respondido
+SELECT E.LAST_NAME, D.DEPARTMENT_NAME, L.CITY, L.STATE_PROVINCE
+FROM HR.EMPLOYEES E 
+INNER JOIN HR.DEPARTMENTS D ON E.DEPARTMENT_ID = D.DEPARTMENT_ID
+INNER JOIN HR.LOCATIONS L ON D.LOCATION_ID = L.LOCATION_ID; 
 
 ----------------------------------------------------------------
 
