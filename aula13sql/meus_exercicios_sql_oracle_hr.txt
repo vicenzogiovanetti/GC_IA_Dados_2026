@@ -87,7 +87,12 @@ EXERCÍCIO 09 — Quem é o gerente?
 Nível 2: Junções (JOINs) e relacionamentos
 Liste o primeiro nome de cada funcionário e o primeiro nome do seu respectivo gerente. Nomeie as colunas como Funcionario e Gerente.
 
--- Não respondido
+SELECT 
+  f.first_name as Funcionarios, 
+  c.first_name as Gerente
+
+FROM HR.EMPLOYEES f LEFT JOIN HR.EMPLOYEES c
+ON f.manager_id = c.employee_id;
 
 ----------------------------------------------------------------
 
