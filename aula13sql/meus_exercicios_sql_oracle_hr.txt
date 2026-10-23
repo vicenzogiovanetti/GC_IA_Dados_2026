@@ -162,7 +162,9 @@ EXERCÍCIO 17 — Tempo de casa
 Nível 4: Desafios avançados
 Mostre o primeiro nome de cada funcionário e quantos anos completos ele tem de empresa, contando desde HIRE_DATE até a data atual.
 
--- Não respondido
+SELECT E.FIRST_NAME, TRUNC(MONTHS_BETWEEN(SYSDATE, START_DATE) / 12) AS ANOS
+FROM HR.EMPLOYEES E INNER JOIN HR.JOB_HISTORY J
+ON E.EMPLOYEE_ID = J.EMPLOYEE_ID;
 
 ----------------------------------------------------------------
 
