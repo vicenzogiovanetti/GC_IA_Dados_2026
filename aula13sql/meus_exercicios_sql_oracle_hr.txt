@@ -124,7 +124,10 @@ EXERCÍCIO 13 — Maior folha por cargo
 Nível 3: Agregações, agrupamentos e subconsultas
 Descubra qual cargo (JOB_ID) possui o maior gasto total com salários (soma dos salários pagos aos funcionários do cargo).
 
--- Não respondido
+SELECT JOB_ID, SUM(SALARY) AS SOMA SALARIO CARGO FROM HR.EMPLOYEES
+GROUP BY JOB_ID
+ORDER BY SOMA SALARIO CARGO DESC
+FETCH FIRST 1 ROW ONLY;
 
 ----------------------------------------------------------------
 
