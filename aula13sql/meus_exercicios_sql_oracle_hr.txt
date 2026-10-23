@@ -175,7 +175,14 @@ EXERCÍCIO 18 — Classificação por salário
 Nível 4: Desafios avançados
 Mostre o primeiro nome, salário e classificação: JÚNIOR para salários menores que 5.000, PLENO de 5.000 a 10.000 (inclusive) e SÊNIOR acima de 10.000. Use CASE.
 
--- Não respondido
+SELECT 
+FIRST_NAME, SALARY,
+CASE
+    WHEN SALARY < 5000 THEN 'JUNIOR'
+    WHEN SALARY<=10000 THEN 'PLENO'
+    ELSE 'SENIOR'
+END AS CLASSIFICACAO
+FROM HR.EMPLOYEES;
 
 ----------------------------------------------------------------
 
