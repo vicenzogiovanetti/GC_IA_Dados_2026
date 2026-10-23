@@ -200,6 +200,7 @@ EXERCÍCIO 20 — Maior salário do departamento
 Nível 4: Desafios avançados
 Mostre o primeiro nome, salário e ID do departamento dos funcionários que recebem o maior salário dentro de seu próprio departamento.
 
--- Não respondido
+SELECT FIRST_NAME, SALARY, DEPARTMENT_ID FROM HR.EMPLOYEES
+WHERE (DEPARTMENT_ID, SALARY) IN (SELECT DEPARTMENT_ID, MAX(SALARY) AS MAIOR_SALARIO FROM HR.EMPLOYEES GROUP BY DEPARTMENT_ID);
 
 ----------------------------------------------------------------
