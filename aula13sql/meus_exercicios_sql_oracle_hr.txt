@@ -190,7 +190,8 @@ EXERCÍCIO 19 — Lista única de gerentes
 Nível 4: Desafios avançados
 Mostre o primeiro nome e o sobrenome de todos os gerentes da empresa, sem repetir nomes. Considere gerente quem aparece na coluna MANAGER_ID de algum funcionário.
 
--- Não respondido
+SELECT FIRST_NAME, LAST_NAME FROM HR.EMPLOYEES
+WHERE MANAGER_ID IN (SELECT EMPLOYEE_ID FROM HR.EMPLOYEES);
 
 ----------------------------------------------------------------
 
