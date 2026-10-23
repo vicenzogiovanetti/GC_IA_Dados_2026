@@ -145,7 +145,8 @@ EXERCÍCIO 15 — Colegas de Lex
 Nível 3: Agregações, agrupamentos e subconsultas
 Liste o primeiro nome e o ID do departamento dos funcionários que trabalham no mesmo departamento que um funcionário chamado Lex. Use subconsulta.
 
--- Não respondido
+SELECT FIRST_NAME, DEPARTMENT_ID FROM HR.EMPLOYEES
+WHERE DEPARTMENT_ID = (SELECT DEPARTMENT_ID FROM HR.EMPLOYEES WHERE FIRST_NAME = 'Lex');
 
 ----------------------------------------------------------------
 
