@@ -108,7 +108,7 @@ EXERCÍCIO 11 — Resumo dos salários
 Nível 3: Agregações, agrupamentos e subconsultas
 Mostre o maior salário, o menor salário, a soma dos salários e a média salarial da empresa inteira.
 
--- Não respondido
+SELECT MAX(SALARY) AS "MAX SALARY", MIN(SALARY) AS "MIN SALARY", SUM(SALARY) AS "SOMA", AVG(SALARY) AS "MEDIA" FROM HR.EMPLOYEES;
 
 ----------------------------------------------------------------
 
