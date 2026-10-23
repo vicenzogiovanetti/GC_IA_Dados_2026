@@ -148,7 +148,7 @@ EXERCÍCIO 16 — Simulação de aumento
 Nível 4: Desafios avançados
 Exiba o primeiro nome, salário atual e salário projetado com aumento de 15%, formatando os dois valores monetários com duas casas decimais.
 
--- Não respondido
+SELECT FIRST_NAME, TO_CHAR(SALARY, 'L99G999D99', 'NLS_NUMERIC_CHARACTERS='',.'' NLS_CURRENCY=''R$ '''), TO_CHAR(1.15*SALARY, 'L99G999D99', 'NLS_NUMERIC_CHARACTERS='',.'' NLS_CURRENCY=''R$ ''') AS "SALÁRIO AUMENTADO" FROM HR.EMPLOYEES; 
 
 ----------------------------------------------------------------
 
