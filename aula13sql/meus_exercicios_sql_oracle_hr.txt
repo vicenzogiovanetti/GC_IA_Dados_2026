@@ -116,7 +116,9 @@ EXERCÍCIO 12 — Departamentos acima da média
 Nível 3: Agregações, agrupamentos e subconsultas
 Exiba o ID de cada departamento e sua média salarial, mas apenas para departamentos cuja média salarial seja maior que $6.000.
 
--- Não respondido
+SELECT DEPARTMENT_ID, ROUND(AVG(SALARY),2) AS "AA" FROM HR.EMPLOYEES
+GROUP BY DEPARTMENT_ID
+HAVING ROUND(AVG(SALARY),2) > 6000;
 
 ----------------------------------------------------------------
 
