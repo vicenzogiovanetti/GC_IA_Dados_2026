@@ -140,7 +140,8 @@ EXERCÍCIO 14 — Acima da média da empresa
 Nível 3: Agregações, agrupamentos e subconsultas
 Selecione o primeiro nome e o salário dos funcionários que ganham mais do que a média salarial da empresa inteira. Use subconsulta.
 
--- Não respondido
+SELECT FIRST_NAME, SALARY FROM HR.EMPLOYEES
+WHERE SALARY > (SELECT AVG(SALARY) FROM HR.EMPLOYEES);
 
 ----------------------------------------------------------------
 
