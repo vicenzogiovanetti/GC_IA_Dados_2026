@@ -100,7 +100,10 @@ EXERCÍCIO 10 — Todos os departamentos
 Nível 2: Junções (JOINs) e relacionamentos
 Liste todos os departamentos e a quantidade de funcionários em cada um, incluindo os departamentos sem funcionários, com contagem 0.
 
--- Não respondido
+SELECT D.DEPARTMENT_NAME, COUNT(E.FIRST_NAME) 
+FROM HR.DEPARTMENTS D LEFT JOIN HR.EMPLOYEES E
+ON D.DEPARTMENT_ID = E.DEPARTMENT_ID
+GROUP BY D.DEPARTMENT_NAME;
 
 ----------------------------------------------------------------
 
